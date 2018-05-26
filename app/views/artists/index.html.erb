@@ -1,0 +1,17 @@
+<div class="container">
+	<h1>Artistas</h1>
+	<div class="row">		
+		<% @artists.each do |artist| %>
+		<div class="card" style="width: 18rem;">
+			<img class="card-img-top" src="<%= artist.image_url %>" alt="<%= artist.name %>">
+			<div class="card-body">
+				<h5 class="card-title text-center"><%= artist.name %></h5>
+				<div class="text-center">
+					<%= link_to "Ver más", artist, class: "btn btn-primary" %>	
+				</div>			    
+			</div>
+		</div>
+		<% end %>	
+	</div>
+</div>
+
